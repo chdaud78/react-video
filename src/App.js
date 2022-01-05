@@ -6,6 +6,7 @@ import {
 
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
+import AppStyle from "./App.module.css";
 
 function App() {
     return <Router>

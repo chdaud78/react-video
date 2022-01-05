@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(450px, 1fr));
+    grid-gap: 50px;
+    width: 80%;
+    padding: 70px 50px 50px 50px;
+    overflow: hidden;
+}
+
+.movie-card {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 300;
+    text-decoration: none;
+    box-sizing: border-box;
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.movie-card img {
+    position: relative;
+    top: -50px;
+    max-width: 150px;
+    width: 100%;
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.movie-card .movie-description {
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.movie-card h2 a {
+    color: #222;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.movie-card ul {
+    padding-top: 20px;
+}
+
+.movie-card ul li {
+    display: inline-block;
+    font-size: 14px;
+    color: #888888;
+}
+
+.movie-card ul li:first-child {
+    margin-left: 0;
+}
+
+.movie-card ul li::before {
+    margin: 0 5px 0 5px;
+    content: "|";
+}
+
+.movie-card ul li:first-child::before {
+    margin: 0;
+    content: "";
+}
+
+.movie-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #adaeb9;
+}
