@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+import style from "../css/movie-details.module.css";
 
 function Detail() {
     const {id} = useParams();
@@ -13,21 +14,19 @@ function Detail() {
         setMovie(json.data.movie);
     };
 
-    console.log(movie);
-
     useEffect(() => {
         getMovie().then();
     }, []);
 
     return (
-        <div>
+        <div className={style["movie-detail"]}>
             <img src={movie.large_cover_image} alt={movie.title}/>
             <h1>{movie.title}</h1>
-            <div>
-                <span>{movie.rating}</span>
-                <span>{movie.runtime} minutes</span>
+            <div className={style["rating-wrap"]}>
+                <span className={style.rating}>{movie.rating} star</span>
+                <span className={style.runtime}>{movie.runtime} minutes</span>
             </div>
-            <ul>
+            <ul className={style.genre}>
                 {movie.genres ? movie.genres.map((genre, idx) =>
                     <li key={idx}>{genre}</li>
                 ) : null}

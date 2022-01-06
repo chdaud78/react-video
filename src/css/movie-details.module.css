@@ -1,0 +1,55 @@
+.movie-detail {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.movie-detail img {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.movie-detail h1 {
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.5;
+}
+
+.movie-detail .rating-wrap {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.movie-detail .rating-wrap span {
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    float: left;
+}
+
+.movie-detail .rating-wrap .rating {
+    margin-right: 10px;
+}
+
+.movie-detail .genre {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    color: #888;
+}
+
+.movie-detail .genre li {
+    margin-right: 10px;
+}
+
+.movie-detail .genre li:last-child {
+    margin-right: 0;
+}
+.movie-detail p {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+}
