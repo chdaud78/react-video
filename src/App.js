@@ -1,10 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 
 const App = () => {
-
     return (
         <div className="App">
-            <div>Hi</div>
         </div>
     )
 }
