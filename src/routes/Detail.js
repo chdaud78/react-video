@@ -1,17 +1,26 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import style from "../css/movie-details.module.css";
+import Modal from "../components/Modal";
 
 function Detail() {
     const {id} = useParams();
 
     const [movie, setMovie] = useState({});
+    const [modalOpen, setModalOpen] = useState(false);
 
     const getMovie = async () => {
         const json = await (
             await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
         ).json();
         setMovie(json.data.movie);
+    };
+
+    const openModal = () => {
+        setModalOpen(true);
+    };
+    const closeModal = () => {
+        setModalOpen(false);
     };
 
     useEffect(() => {
@@ -32,6 +41,10 @@ function Detail() {
                 ) : null}
             </ul>
             <p>{movie.description_full}</p>
+
+            <button onClick={openModal}>더보기</button>
+
+            <Modal open={modalOpen} close={closeModal}/>
         </div>
     )
 }
